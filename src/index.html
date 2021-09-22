@@ -19,10 +19,28 @@
         <div class="logo"></div>
 
         <div class="desktop-nav-box">
-            <a href="#">Features</a>
-            <a href="#">Pricing</a>
-            <a href="#">Contact</a>
+            <a href="#features">Features</a>
+            <a href="#pricing">Pricing</a>
+            <a href="#contact">Contact</a>
             <button type="button" class="button-primary-red">Login</button>
+        </div>
+
+        <div class="mobile-nav-box" data-mobile-nav="hidden">
+            <div class="mobile-nav-header-box">
+                <div class="mobile-logo"></div>
+                <button class='mobile-nav-close'>
+            </div>
+            <ul>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><button>login</button></li>
+
+            </ul>
+            <div class="socials-box">
+                <i class="fab fa-facebook-square"></i>
+                <i class="fab fa-twitter"></i>
+            </div>
         </div>
 
         <button class="hamburger-menu"></button>
@@ -43,21 +61,22 @@
         </div>
     </section>
 
-    <section class="features-box">
+    <section class="features-box" id="features">
 
         <h2>Features</h2>
         <p>Our aim is to make it quick and easy for you to access your favourite websites.
             Your bookmarks sync between your devices so you can access them on the go.</p>
-        <ul>
-            <li><button type="button">Simple Bookmarking</button></li>
-            <li><button type="button">Speedy Searching</button></li>
-            <li><button type="button">Easy Sharing</button></li>
+        <ul data-current-feature-number="1">
+            <li><button type="button" data-feature-number="1">Simple Bookmarking</button></li>
+            <li><button type="button" data-feature-number="2">Speedy Searching</button></li>
+            <li><button type="button" data-feature-number="3">Easy Sharing</button></li>
+            <div class="mark"></div>
         </ul>
 
 
         <div class="features-box-bottom">
             <div class="feature-image">
-                <img src="resources/illustration-hero.svg" />
+                <img src="resources/illustration-features-tab-1.svg" />
             </div>
             <div class="features-box-bottom-side">
                 <h2>Bookmark in one click</h2>
@@ -68,7 +87,7 @@
         </div>
     </section>
 
-    <section class="download-box">
+    <section class="download-box" id="pricing">
         <h2>Download the extension</h2>
         <p>We’ve got more browsers in the pipeline. Please do let us know if you’ve
             got a favourite you’d like us to prioritize.</p>
@@ -147,12 +166,12 @@
         <button type="button" class="button-primary-blue">More Info</button>
     </section>
 
-    <section class="contact">
+    <section class="contact" id="contact">
         <span>35,000+ already joined</span>
         <h2>Stay up-to-date with what we’re doing</h2>
         <form id="contact-form" class="contact-form" data-error="false">
             <div class="input-box">
-                <input type="text" name="email-input">
+                <input type="text" name="email-input" placeholder="Enter your email address">
                 <div class="input-message">Whoops, make sure it's an email</div>
             </div>
             <button type="submit" class="button-primary-red">Contact Us</button>
@@ -162,9 +181,9 @@
     <footer>
         <div class="footer-links">
             <div class="logo"></div>
-            <a href="#">Features</a>
-            <a href="#">Pricing</a>
-            <a href="#">Contact</a>
+            <a href="#features">Features</a>
+            <a href="#pricing">Pricing</a>
+            <a href="#contact">Contact</a>
         </div>
         <div class="socials-box">
             <i class="fab fa-facebook-square"></i>

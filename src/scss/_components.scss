@@ -26,6 +26,10 @@ h4 {
 
 h1 {
     font-size: 3.5rem;
+
+    @include mq(medium) {
+        font-size: 3rem;
+    }
 }
 
 h2 {
@@ -35,4 +39,89 @@ h2 {
 p {
     color: var(--dark-greyish-blue);
     margin: 2rem 0;
+}
+[data-mobile-nav="open"] {
+    display: flex !important;
+}
+
+.mobile-nav-box {
+    display: none;
+    position: absolute;
+    inset: 0;
+    background-color: hsla(229, 46%, 16%, 0.918);
+    z-index: 100;
+
+    padding: 3rem 6rem 5rem;
+    gap: 5rem;
+    // align-items: center;
+    flex-direction: column;
+    .mobile-logo {
+        width: 20rem;
+        height: 8rem;
+        background: url("../resources/logo-bookmark-light.svg") center no-repeat;
+        background-size: 100%;
+    }
+    .mobile-nav-header-box {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .mobile-nav-close {
+        width: 2.5rem;
+        height: 2.5rem;
+        background: url("../resources/icon-close.svg") center no-repeat;
+        background-size: 100%;
+        border: none;
+        cursor: pointer;
+    }
+    ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        list-style-type: none;
+        padding: 0;
+        li:nth-last-of-type(2) a {
+            border-bottom: 1px solid var(--greyish-blue);
+        }
+        a {
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            // background-color: aqua;
+            height: 10rem;
+            margin: 0;
+            border-top: 1px solid var(--greyish-blue);
+            font-size: 2.2rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5rem;
+        }
+        button {
+            color: white;
+            border: 3px solid white;
+            border-radius: 5px;
+            background-color: inherit;
+            width: 100%;
+            height: 7rem;
+            margin-top: 4rem;
+            font-size: 2.2rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5rem;
+            cursor: pointer;
+        }
+    }
+    .socials-box {
+        // background-color: aquamarine;
+        align-self: center;
+        margin-top: auto;
+        i {
+            font-size: 4rem;
+            letter-spacing: 2rem;
+            cursor: pointer;
+        }
+        & :hover {
+            color: white;
+        }
+    }
 }
