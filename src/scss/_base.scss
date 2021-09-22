@@ -10,34 +10,8 @@ $breakpoints: (
 
 @mixin mq($key) {
     $size: map.get($breakpoints, $key);
-
     @media (min-width: $size) {
         @content;
-    }
-}
-
-@mixin page-image($url, $direction) {
-    height: 450px;
-    width: calc(min(500px, 100%));
-    margin: 0 auto;
-    display: block;
-    background: $url center no-repeat;
-    background-size: 100%;
-
-    grid-area: heroImage;
-    position: relative;
-
-    &::after {
-        content: "";
-        display: block;
-        width: 100rem;
-        height: 30rem;
-        background-color: var(--soft-blue);
-        position: absolute;
-        top: 25%;
-        #{$direction}: 10rem;
-        border-radius: 15rem;
-        z-index: -10;
     }
 }
 
@@ -47,11 +21,19 @@ $breakpoints: (
     cursor: pointer;
 }
 
-@mixin button-full($bg-color, $text-color) {
+@mixin button-primary($bg-color, $text-color) {
+    @include button-reset();
+    margin: 1rem;
     border-radius: 0.5rem;
     padding: 1rem 3rem;
     color: $text-color;
     background-color: $bg-color;
     font-weight: var(--font-weight-normal);
     box-shadow: 0 0.5rem 0.5rem rgba(rgb(18, 18, 32), 0.1);
+    transition: box-shadow 0.2s, color 0.2s, background-color 0.2s;
+    &:hover {
+        box-shadow: inset 0 0 0 3px $bg-color;
+        color: $bg-color;
+        background-color: white;
+    }
 }

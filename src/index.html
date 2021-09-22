@@ -11,19 +11,20 @@
 
     <title>Bookmark landing page</title>
     <link rel="stylesheet" href="css/main.css">
+    <script src="https://kit.fontawesome.com/7e85283d50.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
     <nav>
-        <div class="logo-box">
-            <div class="logo"></div>
-        </div>
+        <div class="logo"></div>
+
         <div class="desktop-nav-box">
             <a href="#">Features</a>
             <a href="#">Pricing</a>
             <a href="#">Contact</a>
-            <button type="button" class="button-secondary">Login</button>
+            <button type="button" class="button-primary-red">Login</button>
         </div>
+
         <button class="hamburger-menu"></button>
     </nav>
 
@@ -33,15 +34,17 @@
             <p>A clean and simple interface to organize your favourite websites. Open a new
                 browser tab and see your sites load instantly. Try it for free.</p>
             <div class="button-box">
-                <button type="button" class="button-primary">Get it on Chrome</button>
-                <button type="button" class="button-white">Get it on Firefox</button>
+                <button type="button" class="button-primary-blue">Get it on Chrome</button>
+                <button type="button" class="button-primary-white">Get it on Firefox</button>
             </div>
-
         </div>
         <div class="hero-image">
+            <img src="resources/illustration-hero.svg" />
+        </div>
     </section>
 
     <section class="features-box">
+
         <h2>Features</h2>
         <p>Our aim is to make it quick and easy for you to access your favourite websites.
             Your bookmarks sync between your devices so you can access them on the go.</p>
@@ -50,38 +53,47 @@
             <li><button type="button">Speedy Searching</button></li>
             <li><button type="button">Easy Sharing</button></li>
         </ul>
-        <div class="feature-image"></div>
 
-        <h2>Bookmark in one click</h2>
-        <p>Organize your bookmarks however you like. Our simple drag-and-drop interface
-            gives you complete control over how you manage your favourite sites.</p>
-        <button type="button" class="button-more-info">More Info</button>
+
+        <div class="features-box-bottom">
+            <div class="feature-image">
+                <img src="resources/illustration-hero.svg" />
+            </div>
+            <div class="features-box-bottom-side">
+                <h2>Bookmark in one click</h2>
+                <p>Organize your bookmarks however you like. Our simple drag-and-drop interface
+                    gives you complete control over how you manage your favourite sites.</p>
+                <button type="button" class="button-primary-blue">More Info</button>
+            </div>
+        </div>
     </section>
 
     <section class="download-box">
         <h2>Download the extension</h2>
         <p>We’ve got more browsers in the pipeline. Please do let us know if you’ve
             got a favourite you’d like us to prioritize.</p>
-        <div class="download-card">
-            <img src="resources/logo-chrome.svg">
-            <h4>Add to Chrome</h4>
-            <span>Minimum version 62</span>
-            <div class="divider"></div>
-            <button type="button" class="button-primary">Add & Install Extension</button>
-        </div>
-        <div class="download-card">
-            <img src="resources/logo-firefox.svg">
-            <h4>Add to Firefox</h4>
-            <span>Minimum version 55</span>
-            <div class="divider"></div>
-            <button type="button" class="button-primary">Add & Install Extension</button>
-        </div>
-        <div class="download-card">
-            <img src="resources/logo-opera.svg">
-            <h4>Add to Opera</h4>
-            <span>Minimum version 46</span>
-            <div class="divider"></div>
-            <button type="button" class="button-primary">Add & Install Extension</button>
+        <div class="download-cards-box">
+            <div class="download-card">
+                <img src="resources/logo-chrome.svg">
+                <h4>Add to Chrome</h4>
+                <span>Minimum version 62</span>
+                <div class="divider"></div>
+                <button type="button" class="button-primary-blue">Add & Install Extension</button>
+            </div>
+            <div class="download-card">
+                <img src="resources/logo-firefox.svg">
+                <h4>Add to Firefox</h4>
+                <span>Minimum version 55</span>
+                <div class="divider"></div>
+                <button type="button" class="button-primary-blue">Add & Install Extension</button>
+            </div>
+            <div class="download-card">
+                <img src="resources/logo-opera.svg">
+                <h4>Add to Opera</h4>
+                <span>Minimum version 46</span>
+                <div class="divider"></div>
+                <button type="button" class="button-primary-blue">Add & Install Extension</button>
+            </div>
         </div>
     </section>
 
@@ -90,19 +102,19 @@
         <p>Here are some of our FAQs. If you have any other questions you’d like
             answered please feel free to email us.</p>
 
-        <div class='faq-question-box'>
+        <div class='faq-question-box' data-hidden="true">
             <div class="faq-question-box-top">
                 <span>What is Bookmark?</span>
-                <button type="button" class="arrow"></button>
+                <i class="fas fa-chevron-down"></i>
             </div>
             <p class="faq-answer">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tincidunt
                 justo eget ultricies fringilla. Phasellus blandit ipsum quis quam ornare mattis.</p>
         </div>
 
-        <div class='faq-question-box'>
+        <div class='faq-question-box' data-hidden="true">
             <div class="faq-question-box-top">
                 <span>How can I request a new browser?</span>
-                <button type="button" class="arrow"></button>
+                <i class="fas fa-chevron-down"></i>
             </div>
             <p class="faq-answer">Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non
                 ligula.
@@ -111,10 +123,10 @@
                 Mauris augue massa, ultricies non ligula. Suspendisse imperdiet.</p>
         </div>
 
-        <div class='faq-question-box'>
+        <div class='faq-question-box' data-hidden="true">
             <div class="faq-question-box-top">
                 <span>Is there a mobile app?</span>
-                <button type="button" class="arrow"></button>
+                <i class="fas fa-chevron-down"></i>
             </div>
 
             <p class="faq-answer">Sed consectetur quam id neque fermentum accumsan. Praesent luctus vestibulum dolor, ut
@@ -123,35 +135,40 @@
                 sollicitudin ex et ultricies bibendum.</p>
         </div>
 
-        <div class='faq-question-box'>
+        <div class='faq-question-box' data-hidden="true">
             <div class="faq-question-box-top">
                 <span>What about other Chromium browsers?</span>
-                <button type="button" class="arrow"></button>
+                <i class="fas fa-chevron-down"></i>
             </div>
             <p class="faq-answer">Integer condimentum ipsum id imperdiet finibus. Vivamus in placerat mi, at euismod
                 dui. Aliquam
                 vitae neque eget nisl gravida pellentesque non ut velit.</p>
         </div>
-        <button type="button" class="button-primary">More Info</button>
+        <button type="button" class="button-primary-blue">More Info</button>
     </section>
 
     <section class="contact">
         <span>35,000+ already joined</span>
         <h2>Stay up-to-date with what we’re doing</h2>
-        <form>
-            <input type="text">
-            <button type="submit" class="button-secondary">Contact Us</button>
+        <form id="contact-form" class="contact-form" data-error="false">
+            <div class="input-box">
+                <input type="text" name="email-input">
+                <div class="input-message">Whoops, make sure it's an email</div>
+            </div>
+            <button type="submit" class="button-primary-red">Contact Us</button>
         </form>
     </section>
 
     <footer>
-        <div class="logo"></div>
-        <a href="#">Features</a>
-        <a href="#">Pricing</a>
-        <a href="#">Contact</a>
+        <div class="footer-links">
+            <div class="logo"></div>
+            <a href="#">Features</a>
+            <a href="#">Pricing</a>
+            <a href="#">Contact</a>
+        </div>
         <div class="socials-box">
-            <svg></svg>
-            <svg></svg>
+            <i class="fab fa-facebook-square"></i>
+            <i class="fab fa-twitter"></i>
         </div>
     </footer>
 

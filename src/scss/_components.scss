@@ -1,28 +1,19 @@
-// Anything reusable such as buttons, navbars, cards etc.
+@import "_base";
 
-@import "base";
+.button-primary-blue {
+    @include button-primary(var(--soft-blue), white);
+}
 
-button {
-    @include button-reset();
-
-    &.button-primary {
-        @include button-full(var(--soft-blue), white);
-    }
-
-    &.button-secondary {
-        @include button-full(var(--soft-red), white);
-    }
-
-    &.button-white {
-        @include button-full(var(--darkened-white), var(--dark-greyish-blue));
+.button-primary-white {
+    @include button-primary(var(--darkened-white), var(--dark-greyish-blue));
+    &:hover {
+        box-shadow: inset 0 0 0 3px var(--dark-greyish-blue);
+        color: var(--dark-greyish-blue);
     }
 }
 
-p {
-    color: var(--greyish-blue);
-    text-align: center;
-    line-height: 3rem;
-    margin: var(--min-padding) 0;
+.button-primary-red {
+    @include button-primary(var(--soft-red), white);
 }
 
 h1,
@@ -30,229 +21,18 @@ h2,
 h3,
 h4 {
     color: var(--very-dark-blue);
-    text-align: center;
+    margin: 0rem 0;
 }
 
 h1 {
     font-size: 3.5rem;
 }
 
-a {
+h2 {
+    font-size: 3rem;
+}
+
+p {
     color: var(--dark-greyish-blue);
-    text-decoration: none;
-    font-weight: var(--font-weight-normal);
-}
-
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 var(--min-padding);
-
-    .logo {
-        width: 200px;
-        height: 80px;
-        background: url("../resources/logo-bookmark.svg") center no-repeat;
-        background-size: 100%;
-    }
-
-    .hamburger-menu {
-        width: 30px;
-        height: 30px;
-        background: url("../resources/icon-hamburger.svg") center no-repeat;
-        background-size: 100%;
-    }
-
-    .desktop-nav-box {
-        display: none;
-    }
-}
-
-.hero-box {
-    display: grid;
-    grid-template-areas:
-        "heroImage"
-        "heroSide";
-    overflow-x: hidden;
-    margin: 10rem 0;
-
-    .hero-side {
-        grid-area: heroSide;
-
-        .button-box {
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-        }
-    }
-    h1,
-    p {
-        padding: 0 var(--min-padding);
-    }
-
-    .hero-image {
-        @include page-image(url("../resources/illustration-hero.svg"), left);
-        height: calc(min(50rem, 90vw));
-        width: 100%;
-    }
-}
-
-.features-box {
-    .feature-image {
-        @include page-image(url("../resources/illustration-features-tab-1.svg"), right);
-        width: calc(min(500px, 90%));
-    }
-
-    h2,
-    p {
-        padding: 0 var(--min-padding);
-    }
-
-    .button-more-info {
-        display: none;
-    }
-
-    ul {
-        list-style-type: none;
-        display: flex;
-        flex-direction: column;
-        margin: 0;
-        padding: 0 var(--min-padding);
-
-        button {
-            width: 100%;
-            height: 8rem;
-            border-top: 1px solid var(--greyish-blue);
-            position: relative;
-            &::after {
-                content: "";
-                position: absolute;
-                width: 40%;
-                height: 5px;
-                border-radius: 2px;
-                background-color: var(--soft-red);
-                bottom: 0;
-                left: 30%;
-            }
-        }
-        li:last-of-type button {
-            border-bottom: 1px solid var(--greyish-blue);
-        }
-    }
-}
-
-.download-box {
-    h2,
-    p {
-        padding: 0 var(--min-padding);
-    }
-
-    .download-card {
-        margin: 3rem auto;
-        width: 80%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 3rem;
-        border-radius: 1rem;
-        box-shadow: 0 1rem 1.5rem rgba(rgb(30, 30, 51), 0.1);
-        padding: 3rem;
-
-        span {
-            color: var(--dark-greyish-blue);
-        }
-
-        .divider {
-            width: 100%;
-            height: 10px;
-            background: url("../resources/bg-dots.svg") center no-repeat;
-        }
-
-        img {
-            width: 10rem;
-        }
-    }
-}
-
-.faq-box {
-    h2,
-    > p {
-        padding: 0 var(--min-padding);
-    }
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 3rem;
-    margin: 10rem 0;
-
-    .faq-question-box {
-        width: 80%;
-        margin: 0 auto;
-        border-bottom: 1px solid var(--greyish-blue);
-        .faq-question-box-top {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 2rem;
-
-            .arrow {
-                width: 20px;
-                height: 20px;
-                background: url("../resources/icon-arrow.svg") center no-repeat;
-                background-size: 100%;
-            }
-        }
-        p {
-            display: none;
-        }
-    }
-}
-
-.contact {
-    background-color: var(--soft-blue);
-    color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 3rem;
-    padding: 5rem 3rem;
-
-    input {
-        display: block;
-        width: 100%;
-        margin-bottom: 5rem;
-        border: none;
-        height: 50px;
-        padding: 2rem;
-        position: relative;
-        border-radius: 0.5rem;
-    }
-    button {
-        width: 100%;
-    }
-    form {
-        width: 100%;
-    }
-}
-
-footer {
-    background-color: var(--very-dark-blue);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 3rem;
-
-    .logo {
-        width: 200px;
-        height: 80px;
-        background: url("../resources/logo-bookmark.svg") center no-repeat;
-        background-size: 100%;
-    }
-
-    .socials {
-        display: flex;
-        justify-content: center;
-        gap: 4rem;
-    }
+    margin: 2rem 0;
 }
