@@ -1,0 +1,378 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+*::before,
+*::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+:root {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.8rem;
+  font-family: "Rubik", sans-serif;
+}
+
+button {
+  background-color: unset;
+  border: none;
+  cursor: pointer;
+}
+button.button-primary {
+  border-radius: 0.5rem;
+  padding: 1rem 3rem;
+  color: white;
+  background-color: var(--soft-blue);
+  font-weight: var(--font-weight-normal);
+  box-shadow: 0 0.5rem 0.5rem rgba(18, 18, 32, 0.1);
+}
+button.button-secondary {
+  border-radius: 0.5rem;
+  padding: 1rem 3rem;
+  color: white;
+  background-color: var(--soft-red);
+  font-weight: var(--font-weight-normal);
+  box-shadow: 0 0.5rem 0.5rem rgba(18, 18, 32, 0.1);
+}
+button.button-white {
+  border-radius: 0.5rem;
+  padding: 1rem 3rem;
+  color: var(--dark-greyish-blue);
+  background-color: var(--darkened-white);
+  font-weight: var(--font-weight-normal);
+  box-shadow: 0 0.5rem 0.5rem rgba(18, 18, 32, 0.1);
+}
+
+p {
+  color: var(--greyish-blue);
+  text-align: center;
+  line-height: 3rem;
+  margin: var(--min-padding) 0;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: var(--very-dark-blue);
+  text-align: center;
+}
+
+h1 {
+  font-size: 3.5rem;
+}
+
+a {
+  color: var(--dark-greyish-blue);
+  text-decoration: none;
+  font-weight: var(--font-weight-normal);
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 var(--min-padding);
+}
+nav .logo {
+  width: 200px;
+  height: 80px;
+  background: url("../resources/logo-bookmark.svg") center no-repeat;
+  background-size: 100%;
+}
+nav .hamburger-menu {
+  width: 30px;
+  height: 30px;
+  background: url("../resources/icon-hamburger.svg") center no-repeat;
+  background-size: 100%;
+}
+nav .desktop-nav-box {
+  display: none;
+}
+
+.hero-box {
+  display: grid;
+  grid-template-areas: "heroImage" "heroSide";
+  overflow-x: hidden;
+  margin: 10rem 0;
+}
+.hero-box .hero-side {
+  grid-area: heroSide;
+}
+.hero-box .hero-side .button-box {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+.hero-box h1,
+.hero-box p {
+  padding: 0 var(--min-padding);
+}
+.hero-box .hero-image {
+  height: 450px;
+  width: min(500px, 100%);
+  margin: 0 auto;
+  display: block;
+  background: url("../resources/illustration-hero.svg") center no-repeat;
+  background-size: 100%;
+  grid-area: heroImage;
+  position: relative;
+  height: min(50rem, 90vw);
+  width: 100%;
+}
+.hero-box .hero-image::after {
+  content: "";
+  display: block;
+  width: 100rem;
+  height: 30rem;
+  background-color: var(--soft-blue);
+  position: absolute;
+  top: 25%;
+  left: 10rem;
+  border-radius: 15rem;
+  z-index: -10;
+}
+
+.features-box .feature-image {
+  height: 450px;
+  width: min(500px, 100%);
+  margin: 0 auto;
+  display: block;
+  background: url("../resources/illustration-features-tab-1.svg") center no-repeat;
+  background-size: 100%;
+  grid-area: heroImage;
+  position: relative;
+  width: min(500px, 90%);
+}
+.features-box .feature-image::after {
+  content: "";
+  display: block;
+  width: 100rem;
+  height: 30rem;
+  background-color: var(--soft-blue);
+  position: absolute;
+  top: 25%;
+  right: 10rem;
+  border-radius: 15rem;
+  z-index: -10;
+}
+.features-box h2,
+.features-box p {
+  padding: 0 var(--min-padding);
+}
+.features-box .button-more-info {
+  display: none;
+}
+.features-box ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0 var(--min-padding);
+}
+.features-box ul button {
+  width: 100%;
+  height: 8rem;
+  border-top: 1px solid var(--greyish-blue);
+  position: relative;
+}
+.features-box ul button::after {
+  content: "";
+  position: absolute;
+  width: 40%;
+  height: 5px;
+  border-radius: 2px;
+  background-color: var(--soft-red);
+  bottom: 0;
+  left: 30%;
+}
+.features-box ul li:last-of-type button {
+  border-bottom: 1px solid var(--greyish-blue);
+}
+
+.download-box h2,
+.download-box p {
+  padding: 0 var(--min-padding);
+}
+.download-box .download-card {
+  margin: 3rem auto;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  border-radius: 1rem;
+  box-shadow: 0 1rem 1.5rem rgba(30, 30, 51, 0.1);
+  padding: 3rem;
+}
+.download-box .download-card span {
+  color: var(--dark-greyish-blue);
+}
+.download-box .download-card .divider {
+  width: 100%;
+  height: 10px;
+  background: url("../resources/bg-dots.svg") center no-repeat;
+}
+.download-box .download-card img {
+  width: 10rem;
+}
+
+.faq-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+  margin: 10rem 0;
+}
+.faq-box h2,
+.faq-box > p {
+  padding: 0 var(--min-padding);
+}
+.faq-box .faq-question-box {
+  width: 80%;
+  margin: 0 auto;
+  border-bottom: 1px solid var(--greyish-blue);
+}
+.faq-box .faq-question-box .faq-question-box-top {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+.faq-box .faq-question-box .faq-question-box-top .arrow {
+  width: 20px;
+  height: 20px;
+  background: url("../resources/icon-arrow.svg") center no-repeat;
+  background-size: 100%;
+}
+.faq-box .faq-question-box p {
+  display: none;
+}
+
+.contact {
+  background-color: var(--soft-blue);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  padding: 5rem 3rem;
+}
+.contact input {
+  display: block;
+  width: 100%;
+  margin-bottom: 5rem;
+  border: none;
+  height: 50px;
+  padding: 2rem;
+  position: relative;
+  border-radius: 0.5rem;
+}
+.contact button {
+  width: 100%;
+}
+.contact form {
+  width: 100%;
+}
+
+footer {
+  background-color: var(--very-dark-blue);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+}
+footer .logo {
+  width: 200px;
+  height: 80px;
+  background: url("../resources/logo-bookmark.svg") center no-repeat;
+  background-size: 100%;
+}
+footer .socials {
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+}
+
+:root {
+  --soft-blue: hsl(231, 69%, 60%);
+  --soft-red: hsl(0, 94%, 66%);
+  --greyish-blue: hsl(229, 8%, 60%);
+  --dark-greyish-blue: hsl(231, 6%, 42%);
+  --very-dark-blue: hsl(229, 31%, 21%);
+  --darkened-white: hsl(255, 100%, 98%);
+  --font-weight-slim: 400;
+  --font-weight-normal: 500;
+  --min-padding: 4rem;
+}
+
+/*# sourceMappingURL=main.css.map */

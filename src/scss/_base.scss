@@ -1,0 +1,57 @@
+// variables, mixins, and any utility classes
+
+@use "sass:map";
+
+$breakpoints: (
+    small: 40rem,
+    medium: 65rem,
+    large: 90rem,
+);
+
+@mixin mq($key) {
+    $size: map.get($breakpoints, $key);
+
+    @media (min-width: $size) {
+        @content;
+    }
+}
+
+@mixin page-image($url, $direction) {
+    height: 450px;
+    width: calc(min(500px, 100%));
+    margin: 0 auto;
+    display: block;
+    background: $url center no-repeat;
+    background-size: 100%;
+
+    grid-area: heroImage;
+    position: relative;
+
+    &::after {
+        content: "";
+        display: block;
+        width: 100rem;
+        height: 30rem;
+        background-color: var(--soft-blue);
+        position: absolute;
+        top: 25%;
+        #{$direction}: 10rem;
+        border-radius: 15rem;
+        z-index: -10;
+    }
+}
+
+@mixin button-reset {
+    background-color: unset;
+    border: none;
+    cursor: pointer;
+}
+
+@mixin button-full($bg-color, $text-color) {
+    border-radius: 0.5rem;
+    padding: 1rem 3rem;
+    color: $text-color;
+    background-color: $bg-color;
+    font-weight: var(--font-weight-normal);
+    box-shadow: 0 0.5rem 0.5rem rgba(rgb(18, 18, 32), 0.1);
+}
