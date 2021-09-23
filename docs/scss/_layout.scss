@@ -5,11 +5,12 @@
 :root {
     font-size: 62.5%;
 }
-
+body, html{
+    overflow-x: hidden;
+}
 body {
     font-size: 1.8rem;
-    font-family: "Rubik", sans-serif;
-    overflow-x: hidden;
+    font-family: "Rubik", sans-serif;   
 }
 
 nav {
@@ -81,7 +82,7 @@ section.hero-box {
         @include mq(small) {
             width: 100%;
             order: 1;
-            margin-top: 8rem;
+            margin-top: 10rem;
             text-align: center;
         }
     }
@@ -233,12 +234,12 @@ section.hero-box {
         height: 40rem;
     }
     @include mq(small) {
-        margin-top: 10rem;
+        margin-top: 0rem;
         flex-direction: column;
         // justify-content: center;
         align-items: center;
         // text-align: center;
-        height: 80rem;
+        height: 60rem;
         // height: 100rem;
         // background-color: aqua;
     }
@@ -250,7 +251,8 @@ section.hero-box {
         position: relative;
         // margin-left: auto;
         @include mq(small) {
-            width: 100%;
+            width: 95%;
+            height: 50%;
         }
 
         &::after {
@@ -287,7 +289,7 @@ section.hero-box {
             width: 100%;
             align-items: center;
             text-align: center;
-            margin-top: 0rem;
+            margin-top: 3rem;
         }
         
         button {
@@ -333,7 +335,7 @@ section.hero-box {
     display: flex;
     @include mq(small) {
         flex-direction: column;
-        height: 150rem;
+        height: 120rem;
         padding-bottom: 0;
     }
     .download-card {
@@ -354,14 +356,14 @@ section.hero-box {
             margin: 0 1rem;
             min-width: 30%;
             gap: 1rem;
-            padding: 4rem 0 2rem;
+            // padding: 4rem 0 2rem;
         }
         img {
             width: 10rem;
             margin-bottom: 2rem;
             @include mq(small) {
-                width: 15rem;
-                margin-bottom: 3rem;
+                
+                // margin-bottom: 3rem;
             }
         }
         h4 {
@@ -384,7 +386,7 @@ section.hero-box {
         button {
             @include mq(small) {
                 margin: 1rem 2rem;
-                padding: 1.5rem 4rem;
+                // padding: 1.5rem 4rem;
             }
         }
     }
@@ -634,5 +636,5 @@ footer {
 .features-box,
 .download-box,
 .faq-box {
-    margin: 10rem auto;
+    margin: 8rem auto;
 }

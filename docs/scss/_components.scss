@@ -52,12 +52,12 @@ p {
     z-index: 100;
 
     padding: 3rem 6rem 5rem;
-    gap: 5rem;
+    gap: 2rem;
     // align-items: center;
     flex-direction: column;
     .mobile-logo {
-        width: 20rem;
-        height: 8rem;
+        width: 15rem;
+        height: 5rem;
         background: url("../resources/logo-bookmark-light.svg") center no-repeat;
         background-size: 100%;
     }
@@ -90,7 +90,7 @@ p {
             align-items: center;
             justify-content: center;
             // background-color: aqua;
-            height: 10rem;
+            height: 7rem;
             margin: 0;
             border-top: 1px solid var(--greyish-blue);
             font-size: 2.2rem;
