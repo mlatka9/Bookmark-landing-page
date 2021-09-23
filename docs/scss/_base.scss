@@ -1,0 +1,39 @@
+// variables, mixins, and any utility classes
+
+@use "sass:map";
+
+$breakpoints: (
+    small: 650px,
+    medium: 800px,
+    large: 1000px,
+);
+
+@mixin mq($key) {
+    $size: map.get($breakpoints, $key);
+    @media (max-width: $size) {
+        @content;
+    }
+}
+
+@mixin button-reset {
+    background-color: unset;
+    border: none;
+    cursor: pointer;
+}
+
+@mixin button-primary($bg-color, $text-color) {
+    @include button-reset();
+    margin: 1rem;
+    border-radius: 0.5rem;
+    padding: 1rem 3rem;
+    color: $text-color;
+    background-color: $bg-color;
+    font-weight: var(--font-weight-normal);
+    box-shadow: 0 0.5rem 0.5rem rgba(rgb(18, 18, 32), 0.1);
+    transition: box-shadow 0.2s, color 0.2s, background-color 0.2s;
+    &:hover {
+        box-shadow: inset 0 0 0 3px $bg-color;
+        color: $bg-color;
+        background-color: white;
+    }
+}
