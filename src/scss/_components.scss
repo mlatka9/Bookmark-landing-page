@@ -40,6 +40,7 @@ p {
     color: var(--dark-greyish-blue);
     margin: 2rem 0;
 }
+
 [data-mobile-nav="open"] {
     display: flex !important;
 }
@@ -50,10 +51,8 @@ p {
     inset: 0;
     background-color: hsla(229, 46%, 16%, 0.918);
     z-index: 100;
-
     padding: 3rem 6rem 5rem;
     gap: 2rem;
-    // align-items: center;
     flex-direction: column;
     .mobile-logo {
         width: 15rem;
@@ -89,7 +88,6 @@ p {
             display: flex;
             align-items: center;
             justify-content: center;
-            // background-color: aqua;
             height: 7rem;
             margin: 0;
             border-top: 1px solid var(--greyish-blue);
@@ -112,9 +110,8 @@ p {
         }
     }
     .socials-box {
-        // background-color: aquamarine;
         align-self: center;
-        margin-top: auto;
+        margin-top: 8rem;
         i {
             font-size: 4rem;
             letter-spacing: 2rem;

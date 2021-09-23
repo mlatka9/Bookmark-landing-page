@@ -100,7 +100,7 @@ nav {
 nav .logo {
   width: 15rem;
   height: 8rem;
-  background: url("../resources/logo-bookmark.svg") center no-repeat;
+  background: url("/logo-bookmark.05a2030a.svg") center no-repeat;
 }
 @media (max-width: 650px) {
   nav .desktop-nav-box {
@@ -111,7 +111,7 @@ nav .hamburger-menu {
   display: none;
   width: 3rem;
   height: 3rem;
-  background: url("../resources/icon-hamburger.svg") center no-repeat;
+  background: url("/icon-hamburger.04b6a071.svg") center no-repeat;
   background-size: 100%;
   border: none;
   cursor: pointer;
@@ -481,7 +481,7 @@ section.hero-box .hero-image img {
   text-align: center;
 }
 .download-cards-box .download-card .divider {
-  background: url("../resources/bg-dots.svg") center no-repeat;
+  background: url("/bg-dots.cf16cf3a.svg") center no-repeat;
   width: 100%;
   height: 10px;
 }
@@ -643,7 +643,7 @@ section.faq-box button {
   position: absolute;
   width: 2rem;
   height: 2rem;
-  background: url("../resources/icon-error.svg") center no-repeat;
+  background: url("/icon-error.d59e7ed2.svg") center no-repeat;
   background-size: 100%;
   top: calc(50% - 1rem);
   right: 1.5rem;
@@ -689,7 +689,7 @@ footer {
 footer .logo {
   width: 15rem;
   height: 8rem;
-  background: url("../resources/logo-bookmark-light.svg") center no-repeat;
+  background: url("/logo-bookmark-light.0114ff0f.svg") center no-repeat;
 }
 @media (max-width: 650px) {
   footer .logo {
@@ -849,7 +849,7 @@ p {
 .mobile-nav-box .mobile-logo {
   width: 15rem;
   height: 5rem;
-  background: url("../resources/logo-bookmark-light.svg") center no-repeat;
+  background: url("/logo-bookmark-light.0114ff0f.svg") center no-repeat;
   background-size: 100%;
 }
 .mobile-nav-box .mobile-nav-header-box {
@@ -860,7 +860,7 @@ p {
 .mobile-nav-box .mobile-nav-close {
   width: 2.5rem;
   height: 2.5rem;
-  background: url("../resources/icon-close.svg") center no-repeat;
+  background: url("/icon-close.e03f58c2.svg") center no-repeat;
   background-size: 100%;
   border: none;
   cursor: pointer;
@@ -903,7 +903,7 @@ p {
 }
 .mobile-nav-box .socials-box {
   align-self: center;
-  margin-top: auto;
+  margin-top: 8rem;
 }
 .mobile-nav-box .socials-box i {
   font-size: 4rem;
@@ -928,4 +928,4 @@ p {
   scroll-behavior: smooth;
 }
 
-/*# sourceMappingURL=main.css.map */
+/*# sourceMappingURL=/main.77bb5cfd.css.map */
