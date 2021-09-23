@@ -76,8 +76,9 @@ select {
   font-size: 62.5%;
 }
 
-body, html {
-  overflow-x: hidden;
+#site {
+  overflow: hidden;
+  position: relative;
 }
 
 body {
@@ -217,7 +218,7 @@ section.hero-box .hero-image img {
 @media (max-width: 650px) {
   section.hero-box p {
     margin: 2rem auto;
-    width: 80%;
+    width: 95%;
   }
 }
 
@@ -329,7 +330,7 @@ section.hero-box .hero-image img {
     margin-top: 0rem;
     flex-direction: column;
     align-items: center;
-    height: 60rem;
+    height: 80rem;
   }
 }
 .features-box-bottom .feature-image {
@@ -423,7 +424,7 @@ section.hero-box .hero-image img {
 }
 @media (max-width: 650px) {
   .download-box > p {
-    max-width: 80%;
+    max-width: 95%;
   }
 }
 
@@ -433,6 +434,7 @@ section.hero-box .hero-image img {
 @media (max-width: 650px) {
   .download-cards-box {
     flex-direction: column;
+    align-items: center;
     height: 120rem;
     padding-bottom: 0;
   }
